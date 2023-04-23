@@ -1,10 +1,10 @@
-let day=0;
-let month=0;
-let year=0;
-let table={
-  daytable:[document.querySelector('.d'),document.querySelector('#d'),document.querySelector('label[for="d"]')],
-  monthtable:[document.querySelector('.m'),document.querySelector('#m'),document.querySelector('label[for="m"]')],
-  yeartable:[document.querySelector('.y'),document.querySelector('#y'),document.querySelector('label[for="y"]')]
+let day = 0;
+let month = 0;
+let year = 0;
+let table = {
+  daytable: [document.querySelector('.d'), document.querySelector('#d'), document.querySelector('label[for="d"]')],
+  monthtable: [document.querySelector('.m'), document.querySelector('#m'), document.querySelector('label[for="m"]')],
+  yeartable: [document.querySelector('.y'), document.querySelector('#y'), document.querySelector('label[for="y"]')]
 }
 document.querySelector('.gim').addEventListener('click', (e) => {
   // e.preventDefault();
@@ -32,7 +32,7 @@ document.querySelector('.gim').addEventListener('click', (e) => {
     table.daytable[2].style.color = '';
     c1 = 0;
   }
-  
+
   if (!m) {
     table.monthtable[0].innerHTML = s;
     table.monthtable[1].style.border = '1px solid red';
@@ -49,7 +49,7 @@ document.querySelector('.gim').addEventListener('click', (e) => {
     table.monthtable[2].style.color = '';
     c2 = 0;
   }
-  
+
   if (!y) {
     table.yeartable[0].innerHTML = s;
     table.yeartable[1].style.border = '1px solid red';
@@ -66,13 +66,13 @@ document.querySelector('.gim').addEventListener('click', (e) => {
     table.yeartable[2].style.color = '';
     c3 = 0;
   }
-  
+
 
   console.log(c1, c2, c3);
   if (c1 || c2 || c3) return;
   day = d;
-  month=m;
-  year=y;
+  month = m;
+  year = y;
   console.log(day);
   const form = document.querySelector('form');
   form.dispatchEvent(new Event('submit', { bubbles: true }));
@@ -80,47 +80,44 @@ document.querySelector('.gim').addEventListener('click', (e) => {
 });
 
 document.querySelector('form').addEventListener('submit', (e) => {
-
-  function findAge(current_date, current_month, current_year, birth_date, 
-    birth_month, birth_year) 
-{ 
-// days of every month 
-month = [31, 28, 31, 30, 31, 30, 31, 
-               31, 30, 31, 30, 31 ]
-
-// if birth date is greater than current date 
-// then do not count this month and add 30 
-// to the date so as to subtract the date and 
-// get the remaining days 
-if (birth_date > current_date) { 
-current_date = current_date + month[birth_month - 1]; 
-current_month = current_month - 1; 
-} 
-
-// if birth month exceeds current month, then do 
-// not count this year and add 12 to the month so 
-// that we can subtract and find out the difference 
-if (birth_month > current_month) { 
-current_year = current_year - 1; 
-current_month = current_month + 12; 
-} 
-
-// calculate date, month, year 
-var calculated_date = current_date - birth_date; 
-var calculated_month = current_month - birth_month; 
-var calculated_year = current_year - birth_year; 
-
-// print the present age 
-document.querySelector('.yo').innerHTML=calculated_year;
-document.querySelector('.mo').innerHTML=calculated_month;
-document.querySelector('.do').innerHTML=calculated_date;
-
-} 
-findAge(new Date().getDay(),new Date().getMonth(),new Date().getFullYear(),Number(day),
-Number(month),Number(year));
-
-
+  findAge(new Date().getDay(), new Date().getMonth(), new Date().getFullYear(), Number(day),
+    Number(month), Number(year));
 });
 
+//Findage algorithm is not accurate
+function findAge(current_date, current_month, current_year, birth_date,
+  birth_month, birth_year) {
+  // days of every month 
+  month = [31, 28, 31, 30, 31, 30, 31,
+    31, 30, 31, 30, 31]
+
+  // if birth date is greater than current date 
+  // then do not count this month and add 30 
+  // to the date so as to subtract the date and 
+  // get the remaining days 
+  if (birth_date > current_date) {
+    current_date = current_date + month[birth_month - 1];
+    current_month = current_month - 1;
+  }
+
+  // if birth month exceeds current month, then do 
+  // not count this year and add 12 to the month so 
+  // that we can subtract and find out the difference 
+  if (birth_month > current_month) {
+    current_year = current_year - 1;
+    current_month = current_month + 12;
+  }
+
+  // calculate date, month, year 
+  var calculated_date = current_date - birth_date;
+  var calculated_month = current_month - birth_month;
+  var calculated_year = current_year - birth_year;
+
+  // print the present age 
+  document.querySelector('.yo').innerHTML = calculated_year;
+  document.querySelector('.mo').innerHTML = calculated_month;
+  document.querySelector('.do').innerHTML = calculated_date;
+
+}
 
 
