@@ -35,4 +35,5 @@ To run the app locally, follow these steps:
 
 ## Credits
 
-The Birthday Age Calculator App was built by [Your Name Here].
+Fronend Mentor-https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q
+
