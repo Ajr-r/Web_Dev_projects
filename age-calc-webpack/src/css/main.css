@@ -1,26 +1,26 @@
 @font-face {
   font-family: pboldi;
-  src: url(./assets/fonts/Poppins-BoldItalic.ttf);
+  src: url(./../assets/fonts/Poppins-BoldItalic.ttf);
 }
 @font-face {
   font-family: pbold;
-  src: url(./assets/fonts/Poppins-Bold.ttf);
+  src: url(./../assets/fonts/Poppins-Bold.ttf);
 }
 @font-face {
   font-family: pebold;
-  src: url(./assets/fonts/Poppins-ExtraBold.ttf);
+  src: url(./../assets/fonts/Poppins-ExtraBold.ttf);
 }
 @font-face {
   font-family: peboldi;
-  src: url(./assets/fonts/Poppins-ExtraBoldItalic.ttf);
+  src: url(./../assets/fonts/Poppins-ExtraBoldItalic.ttf);
 }
 @font-face {
   font-family: i;
-  src: url(./assets/fonts/Poppins-Italic.ttf);
+  src: url(./../assets/fonts/Poppins-Italic.ttf);
 }
 @font-face {
   font-family: r;
-  src: url(./assets/fonts/Poppins-Regular.ttf);
+  src: url(./../assets/fonts/Poppins-Regular.ttf);
 }
 body {
   margin: 0;
