@@ -1,4 +1,4 @@
- function findAge(current_date, current_month, current_year, birth_date,
+ export function findAge(current_date, current_month, current_year, birth_date,
     birth_month, birth_year) {
     // days of every month 
    let month = [31, 28, 31, 30, 31, 30, 31,31, 30, 31, 30, 31]
@@ -31,4 +31,6 @@
     document.querySelector('.do').innerHTML = calculated_date;
   
   }
+ 
+
  

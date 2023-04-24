@@ -1,4 +1,4 @@
-function validate(d,m,y,c1,c2,c3)
+export function validate(d,m,y,c1,c2,c3,table)
 {
     const curyear = new Date().getFullYear();
     const s = 'This field is required';

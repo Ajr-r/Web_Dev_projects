@@ -1,3 +1,6 @@
+import { validate } from "./validate.js";
+import {findAge} from "./findage.js";
+import './../css/main.css';
 let day = 0;
 let month = 0;
 let year = 0;
@@ -13,7 +16,7 @@ document.querySelector('.gim').addEventListener('click', (e) => {
   const y = document.querySelector('#y').value;
   let c1, c2, c3 = 0;
 
-  [c1,c2,c4]=validate(d,m,y,c1,c2,c3);
+  [c1,c2,c3]=validate(d,m,y,c1,c2,c3,table);
   if (c1 || c2 || c3) return;
   day = d;
   month = m;
