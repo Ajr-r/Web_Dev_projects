@@ -7,8 +7,9 @@ module.exports = {
         filename: "main.[contenthash].js",
         path: path.resolve(__dirname, "dist"),
         publicPath:"",
-        assetModuleFilename:'[name][ext]'
+        assetModuleFilename:'assets/[name].[ext]'
     },
+   
     plugins: [new HtmlWebpackPlugin({
         template: 'src/index.html',
         inject:true
@@ -27,7 +28,8 @@ module.exports = {
             },
             {
                 test: /\.(png|jpeg|gif|svg|ttf)$/,
-                type:'asset'
+                type:'asset/resource',
+               
             }
 
         ]
