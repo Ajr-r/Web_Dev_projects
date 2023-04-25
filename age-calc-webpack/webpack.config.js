@@ -1,13 +1,18 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     mode: "development",
-  
     entry: "./src/js/index.js",
     output: {
-        filename: "main.js",
+        filename: "main.[contenthash].js",
         path: path.resolve(__dirname, "dist"),
-        publicPath:"./dist"
+        publicPath:"",
+        assetModuleFilename:'[name][ext]'
     },
+    plugins: [new HtmlWebpackPlugin({
+        template: 'src/index.html',
+        inject:true
+    })],
     module: {
         rules: [
             {
@@ -16,20 +21,17 @@ module.exports = {
                
             },
             {
-                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-                use: [
-                    {
-                      loader: 'file-loader',
-                      options: {
-                        name: '[name].[ext]',
-                        outputPath: ''
-                      }
-                    }
-                  ]
+                test: /\.html$/,
+        // More information here https://webpack.js.org/guides/asset-modules/
+              use: "html-loader",
+            },
+            {
+                test: /\.(png|jpeg|gif|svg|ttf)$/,
+                type:'asset'
             }
 
         ]
-    }
+    },
 
 
 

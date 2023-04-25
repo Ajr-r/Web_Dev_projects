@@ -156,7 +156,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*******************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"96a28123273790170781.ttf\";\n\n//# sourceURL=webpack://age-calculator-webpack/./src/assets/fonts/Poppins-Bold.ttf?");
+eval("module.exports = __webpack_require__.p + \"Poppins-Bold.ttf\";\n\n//# sourceURL=webpack://age-calculator-webpack/./src/assets/fonts/Poppins-Bold.ttf?");
 
 /***/ }),
 
@@ -166,7 +166,7 @@ eval("module.exports = __webpack_require__.p + \"96a28123273790170781.ttf\";\n\n
   \*************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"c4d1eab21681e0e969c6.ttf\";\n\n//# sourceURL=webpack://age-calculator-webpack/./src/assets/fonts/Poppins-BoldItalic.ttf?");
+eval("module.exports = __webpack_require__.p + \"Poppins-BoldItalic.ttf\";\n\n//# sourceURL=webpack://age-calculator-webpack/./src/assets/fonts/Poppins-BoldItalic.ttf?");
 
 /***/ }),
 
@@ -176,7 +176,7 @@ eval("module.exports = __webpack_require__.p + \"c4d1eab21681e0e969c6.ttf\";\n\n
   \************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"586d0e684b78bb73148e.ttf\";\n\n//# sourceURL=webpack://age-calculator-webpack/./src/assets/fonts/Poppins-ExtraBold.ttf?");
+eval("module.exports = __webpack_require__.p + \"Poppins-ExtraBold.ttf\";\n\n//# sourceURL=webpack://age-calculator-webpack/./src/assets/fonts/Poppins-ExtraBold.ttf?");
 
 /***/ }),
 
@@ -186,7 +186,7 @@ eval("module.exports = __webpack_require__.p + \"586d0e684b78bb73148e.ttf\";\n\n
   \******************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"e043f93ac01c153a96c5.ttf\";\n\n//# sourceURL=webpack://age-calculator-webpack/./src/assets/fonts/Poppins-ExtraBoldItalic.ttf?");
+eval("module.exports = __webpack_require__.p + \"Poppins-ExtraBoldItalic.ttf\";\n\n//# sourceURL=webpack://age-calculator-webpack/./src/assets/fonts/Poppins-ExtraBoldItalic.ttf?");
 
 /***/ }),
 
@@ -196,7 +196,7 @@ eval("module.exports = __webpack_require__.p + \"e043f93ac01c153a96c5.ttf\";\n\n
   \*********************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"22573983a0542a800822.ttf\";\n\n//# sourceURL=webpack://age-calculator-webpack/./src/assets/fonts/Poppins-Italic.ttf?");
+eval("module.exports = __webpack_require__.p + \"Poppins-Italic.ttf\";\n\n//# sourceURL=webpack://age-calculator-webpack/./src/assets/fonts/Poppins-Italic.ttf?");
 
 /***/ }),
 
@@ -206,7 +206,7 @@ eval("module.exports = __webpack_require__.p + \"22573983a0542a800822.ttf\";\n\n
   \**********************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"91f9894eb5800914349b.ttf\";\n\n//# sourceURL=webpack://age-calculator-webpack/./src/assets/fonts/Poppins-Regular.ttf?");
+eval("module.exports = __webpack_require__.p + \"Poppins-Regular.ttf\";\n\n//# sourceURL=webpack://age-calculator-webpack/./src/assets/fonts/Poppins-Regular.ttf?");
 
 /***/ })
 
@@ -282,7 +282,7 @@ eval("module.exports = __webpack_require__.p + \"91f9894eb5800914349b.ttf\";\n\n
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	(() => {
-/******/ 		__webpack_require__.p = "./dist";
+/******/ 		__webpack_require__.p = "";
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/jsonp chunk loading */
