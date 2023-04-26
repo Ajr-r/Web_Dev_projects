@@ -16,7 +16,8 @@ module.exports = {
       template: 'src/index.html',
       inject: true
     }),
-    new MiniCssExtractPlugin()
+    new MiniCssExtractPlugin(),
+    new webapckBundleAnalyser()
   ],
   module: {
     rules: [
