@@ -156,7 +156,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*******************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"assets/Poppins-Bold..ttf\";\n\n//# sourceURL=webpack://age-calculator-webpack/./src/assets/fonts/Poppins-Bold.ttf?");
+eval("module.exports = __webpack_require__.p + \"assets/fonts/Poppins-Bold.ttf\";\n\n//# sourceURL=webpack://age-calculator-webpack/./src/assets/fonts/Poppins-Bold.ttf?");
 
 /***/ }),
 
@@ -166,7 +166,7 @@ eval("module.exports = __webpack_require__.p + \"assets/Poppins-Bold..ttf\";\n\n
   \*************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"assets/Poppins-BoldItalic..ttf\";\n\n//# sourceURL=webpack://age-calculator-webpack/./src/assets/fonts/Poppins-BoldItalic.ttf?");
+eval("module.exports = __webpack_require__.p + \"assets/fonts/Poppins-BoldItalic.ttf\";\n\n//# sourceURL=webpack://age-calculator-webpack/./src/assets/fonts/Poppins-BoldItalic.ttf?");
 
 /***/ }),
 
@@ -176,7 +176,7 @@ eval("module.exports = __webpack_require__.p + \"assets/Poppins-BoldItalic..ttf\
   \************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"assets/Poppins-ExtraBold..ttf\";\n\n//# sourceURL=webpack://age-calculator-webpack/./src/assets/fonts/Poppins-ExtraBold.ttf?");
+eval("module.exports = __webpack_require__.p + \"assets/fonts/Poppins-ExtraBold.ttf\";\n\n//# sourceURL=webpack://age-calculator-webpack/./src/assets/fonts/Poppins-ExtraBold.ttf?");
 
 /***/ }),
 
@@ -186,7 +186,7 @@ eval("module.exports = __webpack_require__.p + \"assets/Poppins-ExtraBold..ttf\"
   \******************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"assets/Poppins-ExtraBoldItalic..ttf\";\n\n//# sourceURL=webpack://age-calculator-webpack/./src/assets/fonts/Poppins-ExtraBoldItalic.ttf?");
+eval("module.exports = __webpack_require__.p + \"assets/fonts/Poppins-ExtraBoldItalic.ttf\";\n\n//# sourceURL=webpack://age-calculator-webpack/./src/assets/fonts/Poppins-ExtraBoldItalic.ttf?");
 
 /***/ }),
 
@@ -196,7 +196,7 @@ eval("module.exports = __webpack_require__.p + \"assets/Poppins-ExtraBoldItalic.
   \*********************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"assets/Poppins-Italic..ttf\";\n\n//# sourceURL=webpack://age-calculator-webpack/./src/assets/fonts/Poppins-Italic.ttf?");
+eval("module.exports = __webpack_require__.p + \"assets/fonts/Poppins-Italic.ttf\";\n\n//# sourceURL=webpack://age-calculator-webpack/./src/assets/fonts/Poppins-Italic.ttf?");
 
 /***/ }),
 
@@ -206,7 +206,7 @@ eval("module.exports = __webpack_require__.p + \"assets/Poppins-Italic..ttf\";\n
   \**********************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"assets/Poppins-Regular..ttf\";\n\n//# sourceURL=webpack://age-calculator-webpack/./src/assets/fonts/Poppins-Regular.ttf?");
+eval("module.exports = __webpack_require__.p + \"assets/fonts/Poppins-Regular.ttf\";\n\n//# sourceURL=webpack://age-calculator-webpack/./src/assets/fonts/Poppins-Regular.ttf?");
 
 /***/ })
 

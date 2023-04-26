@@ -5,7 +5,7 @@ module.exports = {
     entry: "./src/js/index.js",
     output: {
         filename: "main.[contenthash].js",
-        path: path.resolve(__dirname, "dist"),
+        path: path.resolve(__dirname, "dist_prod"),
         publicPath:"",
         assetModuleFilename:'assets/[name].[ext]'
     },
@@ -27,10 +27,19 @@ module.exports = {
               use: "html-loader",
             },
             {
-                test: /\.(png|jpeg|gif|svg|ttf)$/,
-                type:'asset/resource',
-               
-            }
+                test: /\.(png|jpe?g|gif|svg)$/,
+                type: 'asset/resource',
+                generator: {
+                  filename: 'assets/images/[name][ext]'
+                }
+              },
+              {
+                test: /\.(woff2?|eot|ttf|otf)$/,
+                type: 'asset/resource',
+                generator: {
+                  filename: 'assets/fonts/[name][ext]'
+                }
+              }
 
         ]
     },
