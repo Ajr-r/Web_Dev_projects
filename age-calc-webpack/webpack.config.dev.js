@@ -1,10 +1,11 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webapckBundleAnalyser=require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
   mode: 'development',
   entry: './src/js/index.js',
-  output: {
+  output: { 
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist_dev'),
     publicPath: '',
@@ -14,13 +15,14 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'src/index.html',
       inject: true
-    }),new webapckBundleAnalyser()
+    }),
+    new MiniCssExtractPlugin()
   ],
   module: {
     rules: [
       {
         test: /\.css$/,
-        use: ['style-loader','css-loader']
+        use: [MiniCssExtractPlugin.loader,'css-loader']
       },
       {
         test: /\.html$/,
