@@ -2,7 +2,7 @@
 
 # Frontend Mentor - Age calculator app
 
-site - tes-hosting-da5da.web.app / tes-hosting-da5da.firebaseapp.com
+site - https://tes-hosting-da5da.firebaseapp.com / https://tes-hosting-da5da.web.app/
 
 ![Design preview for the Age calculator app coding challenge](./design/desktop-preview.jpg)
 
