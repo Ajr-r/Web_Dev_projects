@@ -9,6 +9,15 @@ let table = {
   monthtable: [document.querySelector('.m'), document.querySelector('#m'), document.querySelector('label[for="m"]')],
   yeartable: [document.querySelector('.y'), document.querySelector('#y'), document.querySelector('label[for="y"]')]
 }
+document.querySelectorAll('input').forEach((input)=>{
+  input.addEventListener('keypress',(e)=>{
+    if(e.key==='Enter'){
+      e.preventDefault();
+      const form = document.querySelector('form');
+      document.querySelector('.gim').dispatchEvent(new Event('click', { bubbles: true }));
+    }
+  })
+})
 document.querySelector('.gim').addEventListener('click', (e) => {
   // e.preventDefault();
   const d = document.querySelector('#d').value;
