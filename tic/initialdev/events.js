@@ -1,9 +1,12 @@
+
 export function adding_event(box_list){
     box_list.forEach(box => {
         box.addEventListener('click',()=>{
             if(sessionStorage.getItem(box.classList[0]))return;
-            let sp=document.createElement('span')
-            sp.innerText=sessionStorage.getItem('player');
+            let sp=document.createElement('img');
+            let p=sessionStorage.getItem('player');
+
+            p==='x'?sp.src='./assets/images/cross.svg':sp.src='./assets/images/circle.svg'
             box.appendChild(sp);
             sessionStorage.setItem(box.classList[0],sessionStorage.getItem('player'))
             let win=checkwinner(box.classList[0]);
