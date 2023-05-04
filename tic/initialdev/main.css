@@ -106,10 +106,40 @@ td{
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.5), 0 6px 10px 0 rgba(0, 0, 0, 0.1);
     top: 264px;
     position: fixed;
-    font-size: 32px;
+  
     width: 229px;
     height: 79px;
+    transition: transform 0.5s, box-shadow 1s,background-color 0.1s;
+
+    transform-style: preserve-3d; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+.t{
+
+    font-size: 36px;
+    transition: transform 1s,color 0.1s;
+    transition-delay: 0.5;;
+}
+.cp:hover{
+    box-shadow: 0 20px 100px 0 rgba(0, 0, 0, 0.5), 0 20px 10px 0 rgba(0, 0, 0, 0.1);
+     transform:perspective(1200px) rotateX(45deg) ;
+    
+}
+.cp:hover .t{
+    transform:perspective(1200px) translateZ(20px) ;
+}
+.cp:active .t{
+    transition: transform 0.1s;
+    transform:perspective(1200px)  translateZ(10px);
+    color: white;
+}
+.cp:active{
+    background: rgba(173, 173, 173, 0.55);
+}
+
+
 
 .dpn{
     display: none ;
