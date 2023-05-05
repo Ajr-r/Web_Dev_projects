@@ -5,7 +5,16 @@ export function adding_event(box_list){
             if(sessionStorage.getItem(box.classList[0]))return;
             let sp=document.createElement('img');
             let p=sessionStorage.getItem('player');
+            if(p==='x'){
+                document.querySelector('.oicon').classList.add('dsp');
+                document.querySelector('.xicon').classList.remove('dsp');
 
+            }
+            else{
+                document.querySelector('.xicon').classList.add('dsp');
+                document.querySelector('.oicon').classList.remove('dsp');
+
+            }
             p==='x'?sp.src='./assets/images/cross.svg':sp.src='./assets/images/circle.svg'
             box.appendChild(sp);
             sessionStorage.setItem(box.classList[0],sessionStorage.getItem('player'))
