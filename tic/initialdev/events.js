@@ -1,9 +1,9 @@
 let xwins = 0;
 let owins = 0;
-
+import { checkwinner } from "./check.js";
 export function adding_event(box_list) {
     box_list.forEach(box => {
-        box.addEventListener('click', () => {
+        box.addEventListener('click', (e) => {
             if (sessionStorage.getItem(box.classList[0])) return;
             let sp = document.createElement('img');
             let p = sessionStorage.getItem('player');
@@ -22,6 +22,7 @@ export function adding_event(box_list) {
             sessionStorage.setItem(box.classList[0], sessionStorage.getItem('player'))
             let win = checkwinner(box.classList[0]);
             if (win === 1) {
+                // e.preventdefault();
                 let score = document.createElement('img');
                 score.src = './assets/images/score.svg';
                 score.style.margin='2px';
@@ -36,19 +37,32 @@ export function adding_event(box_list) {
 
 
                 }
-                if (xwins === 3 || owins === 3) {
-
-                    setTimeout(() => { alert(`player ${sessionStorage.getItem('player')} won`); location.reload() }, 500);
+                if (xwins === 3 || owins === 3) {    
+                    if(owins>xwins)
+                    document.querySelector('.sym').src='./assets/images/bigo.svg';    
+                                
+                   setTimeout( ()=>{
+                    document.querySelectorAll('.unblur').forEach((e)=>{
+                        e.classList.remove('unblur');
+                    })
+                    document.querySelector('.xicon').classList.remove('dsp');
+                    document.querySelector('.oicon').classList.remove('dsp');
+                    
+                    document.querySelector('.w_screen').classList.add('dsp')},1200);
                 }
                 else {
-                    setTimeout(resetboard, 500);
+                     setTimeout(resetboard, 1300);
                 }
 
                 //    alert(`player ${sessionStorage.getItem('player')} won`);location.reload()
                 return;
             }
             else if (win === 2) {
-                setTimeout(resetboard, 500);
+            const boxes = ["box1", "box2", "box3", "box4", "box5", "box6", "box7", "box8", "box9"];
+            boxes.forEach((b)=>{
+                document.querySelector('.'+b).firstChild.classList.add('blink');
+            })
+                setTimeout(resetboard, 1300);
 
             }
 
@@ -77,133 +91,4 @@ function change() {
         sessionStorage.setItem('player', 'o');
     }
     else sessionStorage.setItem('player', 'x');
-}
-function checkwinner(box) {
-    let player = sessionStorage.getItem('player');
-    switch (box) {
-        case 'box1': {
-
-            if (sessionStorage.getItem('box5') === player &&
-                sessionStorage.getItem('box9') === player)
-                return 1;
-            else if (sessionStorage.getItem('box4') === player &&
-                sessionStorage.getItem('box7') === player)
-                return 1;
-            else if (sessionStorage.getItem('box2') === player &&
-                sessionStorage.getItem('box3') === player)
-                return 1;
-            break;
-        }
-        case 'box2': {
-
-            if (sessionStorage.getItem('box5') === player &&
-                sessionStorage.getItem('box8') === player)
-                return 1;
-            else if (sessionStorage.getItem('box1') === player &&
-                sessionStorage.getItem('box3') === player)
-                return 1;
-
-            break;
-        }
-        case 'box3': {
-
-            if (sessionStorage.getItem('box5') === player &&
-                sessionStorage.getItem('box7') === player)
-                return 1;
-            else if (sessionStorage.getItem('box2') === player &&
-                sessionStorage.getItem('box1') === player)
-                return 1;
-            else if (sessionStorage.getItem('box6') === player &&
-                sessionStorage.getItem('box9') === player)
-                return 1;
-            break;
-        }
-        case 'box4': {
-
-            if (sessionStorage.getItem('box1') === player &&
-                sessionStorage.getItem('box7') === player)
-                return 1;
-            else if (sessionStorage.getItem('box5') === player &&
-                sessionStorage.getItem('box6') === player)
-                return 1;
-
-            break;
-        }
-        case 'box5': {
-
-            if (sessionStorage.getItem('box2') === player &&
-                sessionStorage.getItem('box8') === player)
-                return 1;
-            else if (sessionStorage.getItem('box4') === player &&
-                sessionStorage.getItem('box6') === player)
-                return 1;
-            else if (sessionStorage.getItem('box1') === player &&
-                sessionStorage.getItem('box9') === player)
-                return 1;
-            else if (sessionStorage.getItem('box3') === player &&
-                sessionStorage.getItem('box7') === player)
-                return 1;
-            break;
-        }
-        case 'box6': {
-            if (sessionStorage.getItem('box3') === player &&
-                sessionStorage.getItem('box9') === player)
-                return 1;
-            else if (sessionStorage.getItem('box4') === player &&
-                sessionStorage.getItem('box5') === player)
-                return 1;
-
-            break;
-        }
-        case 'box7': {
-
-            if (sessionStorage.getItem('box4') === player &&
-                sessionStorage.getItem('box1') === player)
-                return 1;
-            else if (sessionStorage.getItem('box5') === player &&
-                sessionStorage.getItem('box3') === player)
-                return 1;
-            else if (sessionStorage.getItem('box8') === player &&
-                sessionStorage.getItem('box9') === player)
-                return 1;
-            break;
-        }
-        case 'box8': {
-            if (sessionStorage.getItem('box2') === player &&
-                sessionStorage.getItem('box5') === player)
-                return 1;
-            else if (sessionStorage.getItem('box7') === player &&
-                sessionStorage.getItem('box9') === player)
-                return 1;
-
-            break;
-        }
-        case 'box9': {
-
-            if (sessionStorage.getItem('box6') === player &&
-                sessionStorage.getItem('box3') === player)
-                return 1;
-            else if (sessionStorage.getItem('box5') === player &&
-                sessionStorage.getItem('box1') === player)
-                return 1;
-            else if (sessionStorage.getItem('box8') === player &&
-                sessionStorage.getItem('box7') === player)
-                return 1;
-            break;
-        }
-
-
-    }
-    return checkdraw();
-}
-function checkdraw() {
-    let arr = ['box1', 'box2', 'box3', 'box4', 'box5', 'box6', 'box7', 'box8', 'box9'];
-    let c = 2
-    arr.forEach((b) => {
-        if (!sessionStorage.getItem(b)) {
-            c = 0;
-            return;
-        }
-    })
-    return c;
 }
