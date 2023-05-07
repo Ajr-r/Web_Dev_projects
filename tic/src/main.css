@@ -56,10 +56,9 @@ body{
 table{
     /* align-items: center; */
     /* background-color: aqua; */
-    position: relative;
-    left: 10px;
+    position: fixed;
     width: 180px;
-    transform: translate(-20px,35px);
+    transform: translate(-10px,380px);
     /* border: 1.5px solid white; */
     border-collapse: collapse;
 }
@@ -77,17 +76,9 @@ td{
     color: white;
     text-align: center;
 }
-.hl{
-    position: fixed;
-    top: 432px;
-    left:538px;
-}
-.vl{
+.divider{
     position:fixed;
-    width: 2px;
-    height: 200px;
-    top: 370px;
-    left: 635px;
+    transform: translate(-5px,375px);
 }
 .m_screen,.w_screen{
     box-sizing: border-box;
@@ -161,26 +152,27 @@ td{
   }
     
 }
-@keyframes iconanimate {
-    0%{
-        transform: translateY(0px);
-    }
-    50%{
-        transform: translateY(-15px);
-    }
-    100%{
-        transform: translateY(0px);
-    }
-    
-    
-}
+
 .xicon{
     position: fixed;
-    top: 350px;
-    left: 666px;
-    animation: iconanimate 1s infinite;
+    transform: translate(38px,350px);
+    animation: xiconanimate 1s infinite;
     display: none;
     
+}
+@keyframes xiconanimate {
+    0%{
+        transform: translate(38px,350px);
+
+    }
+    50%{
+        transform: translate(38px,340px);
+
+    }
+    100%{
+        transform: translate(38px,350px);
+
+    }   
 }
 @keyframes scorean{
 0%{
@@ -203,11 +195,25 @@ td{
 .oicon{
     position: fixed;
     display: none;
-    top: 350px;
-    left: 578px;
-    animation: iconanimate 1s infinite;
+    transform:translate(-50px,350px);
+    animation: oiconanimate 1s infinite;
 
 }
+@keyframes oiconanimate {
+    0%{
+        transform: translate(-50px,350px);
+
+    }
+    50%{
+        transform: translate(-50px,340px);
+
+    }
+    100%{
+        transform: translate(-50px,350px);
+
+    }   
+}
+
 
 .dpn{
     animation: loadtomain 1s;
@@ -228,14 +234,18 @@ td{
     animation: b 1s infinite;
 }
 .w_screen :first-child{
+    position: fixed  !important; 
     transform: translate(-5px,-60px);
 }
 .w_screen :nth-child(2){
-    transform: translate(-5px,-285px);
+
+    transform: translate(-5px,-60px);
     
 }
 .w_screen :nth-child(3){
-    transform: translate(0,250px);
+    position: relative;
+
+    /* transform: translate(0,250px); */
     
 }
 .w_screen{

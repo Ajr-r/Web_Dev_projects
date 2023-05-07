@@ -1,24 +1,12 @@
-// console.log(document.querySelectorAll('.cont div'));
-import './main.css';
-import './assets/images/score.svg';
-import './assets/images/subtract.svg';
-import './assets/images/bigo.svg';
+import {adding_event} from './events.js'
+import './assets/images/score.svg'
+import './main.css'
+sessionStorage.clear();   
+let time=Number(new Date().getTime().toString().at(-1));
 
-
-import {adding_event } from './events.js'
-sessionStorage.clear(); 
-function randomIntFromInterval(min, max) { // min and max included 
-    return Math.floor(Math.random() * (max - min + 1) + min)
-  }
-  
-const rndInt = randomIntFromInterval(1,2)
-console.log(rndInt)
-
- localStorage.removeItem('player')
  let curplayer='';
  if(!sessionStorage.getItem('player')){
-    sessionStorage.setItem('player','x');
-    
+    time%2===0?sessionStorage.setItem('player','x'):sessionStorage.setItem('player','o');   
 }
 let box_list=document.querySelectorAll('.cont div');
 adding_event(box_list);
@@ -27,6 +15,17 @@ document.querySelector('.cp').addEventListener('click',()=>{
     document.querySelectorAll('.blur').forEach((e)=>{
         e.classList.add('unblur')
     })
-    document.querySelector('.xicon').classList.add('dsp');
+    let p = sessionStorage.getItem('player');
+
+    if (p === 'x') {
+        document.querySelector('.xicon').classList.add('dsp');
+        document.querySelector('.oicon').classList.remove('dsp');
+
+    }
+    else {
+        document.querySelector('.oicon').classList.add('dsp');
+        document.querySelector('.xicon').classList.remove('dsp');
+
+    }
 }) 
 

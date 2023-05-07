@@ -4,7 +4,6 @@ import { checkwinner } from "./check.js";
 export function adding_event(box_list) {
     box_list.forEach(box => { 
         box.addEventListener('click', (e) => {
-    console.log(box);
     if (sessionStorage.getItem(box.classList[0])) return;
             let sp = document.createElement('img');
             let p = sessionStorage.getItem('player');
@@ -23,6 +22,7 @@ export function adding_event(box_list) {
             sessionStorage.setItem(box.classList[0], sessionStorage.getItem('player'))
             let win = checkwinner(box.classList[0]);
             if (win === 1) {
+                disableclicks();
                 // e.preventdefault();
                 let score = document.createElement('img');
                 score.src = './assets/images/score.svg';
@@ -39,6 +39,7 @@ export function adding_event(box_list) {
 
                 }
                 if (xwins === 3 || owins === 3) {    
+                    disableclicks();
                     if(owins>xwins)
                     document.querySelector('.sym').src='./assets/images/bigo.svg';    
                                 
@@ -52,6 +53,7 @@ export function adding_event(box_list) {
                     document.querySelector('.w_screen').classList.add('dsp')},1200);
                 }
                 else {
+                    p==='x'?sessionStorage.setItem('player','o'):sessionStorage.setItem('player','x');
                      setTimeout(resetboard, 1300);
                 }
 
@@ -63,15 +65,31 @@ export function adding_event(box_list) {
             boxes.forEach((b)=>{
                 document.querySelector('.'+b).firstChild.classList.add('blink');
             })
-                setTimeout(resetboard, 1300);
+            // p==='x'?sessionStorage.setItem('player','o'):sessionStorage.setItem('player','x');
+                
+            setTimeout(resetboard, 1300);
 
             }
 
             change();
         })
-        sessionStorage.getItem('player')
+      
 
     });
+
+}
+function enableclicks(){
+    const boxes = ["box1", "box2", "box3", "box4", "box5", "box6", "box7", "box8", "box9"];
+    boxes.forEach((b)=>{
+        document.querySelector('.'+b).style.pointerEvents = 'auto';
+    })
+
+}
+function disableclicks(){
+    const boxes = ["box1", "box2", "box3", "box4", "box5", "box6", "box7", "box8", "box9"];
+    boxes.forEach((b)=>{
+        document.querySelector('.'+b).style.pointerEvents = 'none';
+    })
 
 }
 function resetboard() {
@@ -85,6 +103,7 @@ function resetboard() {
         }
         sessionStorage.removeItem(box);
     })
+    enableclicks()
 
 }
 function change() {
