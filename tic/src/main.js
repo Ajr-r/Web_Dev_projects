@@ -1,5 +1,7 @@
 import {adding_event} from './events.js'
 import './assets/images/score.svg'
+import './assets/images/bigo.svg'
+
 import './main.css'
 sessionStorage.clear();   
 let time=Number(new Date().getTime().toString().at(-1));
